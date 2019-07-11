@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-editable-controls": [
+        "dist/ng-editable-controls"
+      ],
+      "ng-editable-controls/*": [
+        "dist/ng-editable-controls/*"
+      ]
+    }
   }
 }

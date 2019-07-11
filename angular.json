@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ng-editable-controls": {
+      "root": "projects/ng-editable-controls",
+      "sourceRoot": "projects/ng-editable-controls/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-editable-controls/tsconfig.lib.json",
+            "project": "projects/ng-editable-controls/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-editable-controls/src/test.ts",
+            "tsConfig": "projects/ng-editable-controls/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-editable-controls/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-editable-controls/tsconfig.lib.json",
+              "projects/ng-editable-controls/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "editable-div"
