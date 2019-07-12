@@ -9,7 +9,7 @@ export class NgEditableControlsComponent implements OnInit {
 
   @Input() inputText : string = "";
 
-  private isEditable : boolean = false;
+  public isEditable : boolean = false;
 
   constructor() { }
 
